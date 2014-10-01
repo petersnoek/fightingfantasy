@@ -58,7 +58,7 @@ else
 
 
 //make a new TemplatePower object
-$tpl = new TemplatePower( "./html/default-page.tpl.html" );
+$tpl = new TemplatePower( "./html/default-page.tpl" );
 
 //let TemplatePower do its thing, parsing etc.
 $tpl->prepare();
