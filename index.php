@@ -22,6 +22,10 @@ if ( isset ( $_GET['action'] ) ) {
 		case "flee":
 			$player->hit(5);
 			break;
+		case "heal":
+			$player->heal(4);
+			break;
+
 		case "location":
 			if ( isset($params[1]) )
 			{
@@ -64,7 +68,7 @@ $tpl = new TemplatePower( "./html/default-page.tpl" );
 $tpl->prepare();
 
 //assign a value to {pagetitle}
-$tpl->assign( "pagetitle", $location->location_name() );
+$tpl->assign( "pagetitle", $location->get_location_name() );
 $tpl->assign("debug", $debug->render_debug() );
 
 //create a new "error" block
@@ -83,7 +87,7 @@ if ( strlen(trim($statusupdate))>0 )
 
 //create a new "stats" block
 $tpl->newBlock("stats");
-$tpl->assign("health", 10 );
+$tpl->assign("health", $player->get_hp() );
 $tpl->assign("stamina", 10 );
 $tpl->assign("xp", 0 );
 
@@ -100,7 +104,7 @@ $tpl->assign("count", 1 );
 
 //create "location" block
 $tpl->newBlock("location");
-$tpl->assign("l_name", $location->location_name() );
+$tpl->assign("l_name", $location->get_location_name() );
 $tpl->assign("l_description", "Heel uitgebreid verhaal." );
 
 

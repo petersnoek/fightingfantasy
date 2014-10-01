@@ -27,7 +27,8 @@
 				<!-- START BLOCK : status -->
 				<div class='box statusupdate' >{statusupdate}</div> 
 				<!-- END BLOCK : status -->
-				</div>  <!-- end header -->
+
+			</div>  <!-- end header -->
 			
 			<div class="sidebar">
 			
@@ -57,7 +58,7 @@
 				
 				<div id="battle">
 					the battle box!<br>
-					<a href="/fight">Fight!</a><br>
+					<a href="/heal">Heal</a><br>
 					<a href="/flee">Flee</a><br>
 					
 				</div> <!-- end battle -->
